@@ -1,7 +1,14 @@
+import { HeroSection } from "../components/ui/HeroSection.tsx"
 
 const Home = () => {
   return (
-    <div  className="bg-blue-600 text-white text-3xl w-full">Home</div>
+    <div >
+      <div className="flex w-full h-screen justify-center items-center">
+      <HeroSection />
+    </div>
+    
+      
+    </div>
   )
 }
 

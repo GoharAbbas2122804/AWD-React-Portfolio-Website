@@ -4,12 +4,14 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Services from './pages/Services'
 import Contact from './pages/Contact'
+import { NotFound } from './components/ui/not-found'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
     <div>
-
-      App
+      <Navbar />
 
       <Routes>
         <Route path='/' element={<Home />} />
@@ -17,8 +19,11 @@ const App = () => {
         <Route path='/projects' element={<Projects />} />
         <Route path='/services' element={<Services />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
 
+      <Footer />
+      
     </div>
   )
 }

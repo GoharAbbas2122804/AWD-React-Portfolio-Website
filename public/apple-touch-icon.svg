@@ -1,0 +1,31 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- iOS style rounded square -->
+  <rect width="180" height="180" rx="40" fill="url(#iosGradient)"/>
+  
+  <defs>
+    <linearGradient id="iosGradient" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- "GA" text optimized for iOS -->
+  <text 
+    x="90" 
+    y="115" 
+    font-family="'SF Pro Display', 'Inter', system-ui, sans-serif" 
+    font-size="85" 
+    font-weight="800" 
+    fill="white" 
+    text-anchor="middle"
+    filter="url(#shadow)"
+    letter-spacing="-3"
+  >GA</text>
+  
+  <!-- Subtle accent -->
+  <rect x="50" y="125" width="80" height="3" rx="1.5" fill="white" opacity="0.7"/>
+</svg>

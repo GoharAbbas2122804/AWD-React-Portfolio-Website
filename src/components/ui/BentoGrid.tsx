@@ -1,15 +1,20 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-
-// Also install this npm i --save-dev @types/react-lottie
 import Lottie from "react-lottie";
 
-
-
-import { BackgroundGradientAnimation } from "./GradietBg";
+// Removed missing imports - GridGlobe and GradientBg components
 import MagicButton from "../MagicButton";
 import { cn } from "../../lib/utils";
 
+// Simple placeholder animation data
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: {}, // Empty object for now
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
 
 export const BentoGrid = ({
   className,
@@ -55,15 +60,6 @@ export const BentoGridItem = ({
   const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
 
   const [copied, setCopied] = useState(false);
-
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
 
   const handleCopy = () => {
     const text = "hsu@jsmastery.pro";
@@ -112,9 +108,9 @@ export const BentoGridItem = ({
         </div>
         {id === 6 && (
           // add background animation , remove the p tag
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
-          </BackgroundGradientAnimation>
+          <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg">
+            Gradient Background
+          </div>
         )}
 
         <div
@@ -135,8 +131,8 @@ export const BentoGridItem = ({
             {title}
           </div>
 
-          {/* for the github 3d globe */}
-          {id === 2 && <GridGlobe />}
+          {/* for the github 3d globe - placeholder */}
+          {id === 2 && <div className="text-center text-white">3D Globe Placeholder</div>}
 
           {/* Tech stack list div */}
           {id === 3 && (

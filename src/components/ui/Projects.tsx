@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils"; // Assuming you have a cn utility for merging class names
+import { cn } from "../../lib/utils";
 
 // Define the props interface for type safety and clarity
 export interface ProjectCardProps extends React.HTMLAttributes<HTMLDivElement> {
